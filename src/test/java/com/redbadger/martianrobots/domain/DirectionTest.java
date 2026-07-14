@@ -30,8 +30,11 @@ class DirectionTest {
             "WEST, 3, 3, 2, 3"
     })
     void movingForwardFollowsTheCompass(
-            Direction direction, int x, int y, int expectedX, int expectedY) {
-        assertEquals(new Position(expectedX, expectedY), new Position(x, y).next(direction));
+            Direction direction,
+            int startXCoordinate, int startYCoordinate,
+            int expectedXCoordinate, int expectedYCoordinate) {
+        Position start = new Position(startXCoordinate, startYCoordinate);
+        assertEquals(new Position(expectedXCoordinate, expectedYCoordinate), start.next(direction));
     }
 
     @ParameterizedTest
