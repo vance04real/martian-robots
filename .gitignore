@@ -1,0 +1,12 @@
+target/
+
+# IDE
+.idea/
+*.iml
+
+# OS / tooling noise
+.DS_Store
+*.log
+
+# Maven wrapper jar is the one exception
+!.mvn/wrapper/maven-wrapper.jar
